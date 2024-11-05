@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Donate Life</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">Donate Life</div>
+    <nav>
+      <a href="#why-donate">Why Donate?</a>
+      <a href="#where-to-donate">Where to Donate</a>
+      <a href="#who-requires-blood">Who Requires Blood</a>
+      <a href="#can-i-donate">Can I Donate?</a>
+      <a href="#need-blood">Need Blood</a>
+    </nav>
+  </header>
+
+  <!-- Main Banner -->
+  <section class="banner">
+    <h1>Your Blood Can Save Lives!</h1>
+    <button onclick="donateNow()">Donate Now</button>
+  </section>
+
+  <!-- Why Donate Section -->
+  <section id="why-donate">
+    <h2>Why Donate?</h2>
+    <div class="benefits">
+      <div class="card">Health Benefits: Reduced heart disease, iron balancing</div>
+      <div class="card">Community Impact: Helping local patients and families</div>
+      <div class="card">Personal Fulfillment: Positive impact on mental well-being</div>
+    </div>
+  </section>
+
+  <!-- Where to Donate Section -->
+  <section id="where-to-donate">
+    <h2>Where to Donate</h2>
+    <button onclick="findNearbyBloodBanks()">Find Nearby Blood Banks</button>
+    <div id="map" class="map"></div>
+  </section>
+
+  <!-- Who Requires Blood Section -->
+  <section id="who-requires-blood">
+    <h2>Who Requires Blood?</h2>
+    <button onclick="navigateToEmergencyBloodRequirements()">View Emergency Blood Requirements</button>
+  </section>
+
+  <!-- Can I Donate Section -->
+  <section id="can-i-donate">
+    <h2>Can I Donate?</h2>
+    <p>Answer a few questions to check your eligibility.</p>
+    <form id="eligibility-form" onsubmit="checkEligibility(event)">
+      <label>Are you above 18? <input type="checkbox" name="age" required></label>
+      <label>Are you over 50kg? <input type="checkbox" name="weight" required></label>
+      <label>No major illnesses in the past month? <input type="checkbox" name="health" required></label>
+      <button type="submit">Check Eligibility</button>
+    </form>
+    <div id="eligibility-result"></div>
+  </section>
+
+  <!-- Need Blood (Emergency Alert) Section -->
+  <section id="need-blood">
+    <h2>Emergency Blood Alert</h2>
+    <p>If you need blood urgently, click below to request help.</p>
+    <button onclick="alertEmergencyBloodRequest()">Request Blood</button>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Donate Life | Contact: donate@lifesaver.com | Follow us on social media</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
